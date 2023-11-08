@@ -12,7 +12,7 @@
 <p align="left" witdh="100%">
 <img src="https://i.imgur.com/TjOM8ri.gif" width="24%">
 <img src="https://i.imgur.com/PagnojW.gif" width="24%">
-<img src="https://i.imgur.com/bFIs58r.gif" width="24%">
+<img src="https://i.imgur.com/bJe2oBE.gif" width="24%">
 <img src="https://i.imgur.com/eOHl91i.gif" width="24%">
 </p>
 
