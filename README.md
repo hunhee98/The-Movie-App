@@ -5,7 +5,7 @@
 - 기간: 2023.08.12 - 2023.08.23
 
 ### 한 줄 소개
-- 인기 영화 목록을 확인하고 가까운 영화관 정보를 얻는 iOS 앱 서비스
+- 인기, 장르 별 영화 목록을 제공하고 가까운 영화관 정보를 얻는 iOS 앱 서비스
 
 ### 앱 미리보기
 
@@ -23,6 +23,7 @@
 - Architecture: `MVC`
 - iOS: `UIKit`
 - UI: `Storyboard`, `SnapKit`
+- Reactive: `RxSwift`
 - Network: `Alamofire`, `SwiftyJSON`, `Codable`, `REST API`
 - Image: `Kingfisher`
 - Dependency Manager: `CocoaPods`, `SwiftPackageManager`
@@ -30,8 +31,15 @@
 ### 이런 기능들이 있어요
 - 인기 영화 목록 제공
 - 유사한 영화 목록 제공
+- 장르 별 영화 목록 제공
 - 영화 출연진, 제작진 및 줄거리 미리보기 제공
 - 사용자 위치 기반 근처 영화관 목록 제공
+
+### 주요 성과
+* `Compositional Layout`를 사용하여 **UX 사용자 경험 개선**:   
+장르 별 영화 컨텐츠 목록을 효과적으로 Present하고자 Horizontal Scroll View UI를 채택함. 이를 Compositional Layout으로 구현하여 스크롤이 중첩된 구조에서도 자연스러운 스크롤 애니메이션을 제공함
+* `RxSwift` 리팩토링을 통한 코드 개선:   
+기존 네트워크 통신 로직과 UI 업데이트 로직을 RxSwift 기반으로 수정하여 코드를 간결하고 에러처리에 용이한 구조를 이룸
 
 ### 트러블 슈팅
 #### 1. 문자열 리터럴 리소스 관리
@@ -77,3 +85,5 @@ extension FinderViewController: NMFMapViewCameraDelegate {
   }
 }
 ```
+
+### 회고
