@@ -10,9 +10,10 @@
 ### 앱 미리보기
 
 <p align="left" witdh="100%">
-<img src="https://i.imgur.com/WNTfrRU.gif" width="24%">
-<img src="https://i.imgur.com/W3D7KqU.gif" width="24%">
-<img src="https://i.imgur.com/yhY5zJh.gif" width="24%">
+<img src="https://i.imgur.com/TjOM8ri.gif" width="24%">
+<img src="https://i.imgur.com/PagnojW.gif" width="24%">
+<img src="https://i.imgur.com/bFIs58r.gif" width="24%">
+<img src="https://i.imgur.com/eOHl91i.gif" width="24%">
 </p>
 
 ### 개발 환경
