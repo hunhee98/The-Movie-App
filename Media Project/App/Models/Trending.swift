@@ -39,7 +39,7 @@ struct Trending: Codable {
 }
 
 // MARK: - Result
-struct Movie: Codable {
+struct Movie: Codable, Hashable {
   let title: String
   let voteAverage: Double
   let voteCount: Int
@@ -74,5 +74,13 @@ struct Movie: Codable {
   
   var backdropImageURL: String {
     MovieAPIManager.imageCDN + (backdropPath ?? "")
+  }
+  
+  static func == (lhs: Movie, rhs: Movie) -> Bool {
+    lhs.id == rhs.id
+  }
+  
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(id)
   }
 }

@@ -14,12 +14,14 @@ final class DiscoverCollectionViewCell: UICollectionViewCell {
   
   private let imageView: UIImageView = {
     let view = UIImageView()
-    view.contentMode = .scaleAspectFill
+    view.contentMode = .scaleToFill
     return view
   }()
   
   private let titleLabel: UILabel = {
     let view = UILabel()
+    view.font = .monospacedDigitSystemFont(ofSize: 12, weight: .bold)
+    view.textAlignment = .center
     view.numberOfLines = 1
     return view
   }()
@@ -28,6 +30,8 @@ final class DiscoverCollectionViewCell: UICollectionViewCell {
     super.init(frame: frame)
     
     setConstraints()
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
+    contentView.addGestureRecognizer(tapGesture)
   }
   
   required init?(coder: NSCoder) {
@@ -35,12 +39,19 @@ final class DiscoverCollectionViewCell: UICollectionViewCell {
   }
 
   var movie: Movie?
+  var tapAction: ((Movie) -> ())?
+  
+  @objc func cellTapped() {
+    guard let movie else { return }
+    tapAction?(movie)
+  }
   
   func configureView() {
     if let movie,
        let url = URL(string: movie.posterImageURL) {
       imageView.kf.setImage(with: url, options: [.transition(.fade(0.7))])
     }
+    titleLabel.text = movie?.title
   }
   
   private func setConstraints() {
@@ -49,13 +60,14 @@ final class DiscoverCollectionViewCell: UICollectionViewCell {
     
     imageView.snp.makeConstraints { make in
       make.top.horizontalEdges.equalToSuperview()
-      make.height.greaterThanOrEqualToSuperview().multipliedBy(0.7)
+      make.height.equalToSuperview().multipliedBy(0.85)
     }
     
     titleLabel.snp.makeConstraints { make in
-      make.top.equalTo(imageView.snp.bottom).offset(10)
-      make.horizontalEdges.equalToSuperview().inset(15)
-      make.bottom.equalToSuperview()
+      make.top.equalTo(imageView.snp.bottom).offset(5)
+      make.centerX.equalToSuperview()
+      make.leading.trailing.greaterThanOrEqualToSuperview().inset(5)
+      make.bottom.equalToSuperview().offset(-5)
     }
   }
 }

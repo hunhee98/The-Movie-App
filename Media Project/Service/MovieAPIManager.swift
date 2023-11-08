@@ -13,7 +13,7 @@ final class MovieAPIManager {
   static let shared = MovieAPIManager()
   private init() { }
   
-  func callRequest<T: Codable>(type: Endpoint, responseType: T.Type, handler: @escaping (T?) -> ()) {
+  func callRequest<T: Decodable>(type: Endpoint, responseType: T.Type, handler: @escaping (T?) -> ()) {
     let url = type.requestURL
     let headers: HTTPHeaders = [
       "Authorization": APIKeys.theMovieDB
@@ -39,6 +39,8 @@ extension MovieAPIManager {
     case trending(timeWindow)
     case credits(Int)
     case similar(Int)
+    case genres
+    case discover(Int)
     
     var requestURL: String {
       let baseURL = MovieAPIManager.baseURL
@@ -46,6 +48,8 @@ extension MovieAPIManager {
       case .trending(let tw): return baseURL + "trending/movie/" + tw.rawValue
       case .credits(let id): return baseURL + "movie/\(id)/credits"
       case .similar(let id): return baseURL + "movie/\(id)/similar"
+      case .genres: return baseURL + "genre/movie/list"
+      case .discover(let id): return baseURL + "discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=\(id)"
       }
     }
     

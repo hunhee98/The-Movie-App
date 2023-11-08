@@ -15,6 +15,10 @@
 		B63F3F242A87A90F00E9168A /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F3F232A87A90F00E9168A /* Extension+UIView.swift */; };
 		B63F3F272A87AAFF00E9168A /* MovieAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F3F262A87AAFF00E9168A /* MovieAPIManager.swift */; };
 		B63F3F2B2A87C1A800E9168A /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F3F2A2A87C1A800E9168A /* MovieDetailViewController.swift */; };
+		B64EB76F2AFB5E28001FCE32 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64EB76E2AFB5E28001FCE32 /* DiscoverViewController.swift */; };
+		B64EB7712AFB6129001FCE32 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64EB7702AFB6129001FCE32 /* Genres.swift */; };
+		B64EB7732AFB62AB001FCE32 /* DiscoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64EB7722AFB62AB001FCE32 /* DiscoverCollectionViewCell.swift */; };
+		B64EB7752AFB65FE001FCE32 /* TitleSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64EB7742AFB65FE001FCE32 /* TitleSupplementaryView.swift */; };
 		B66FD83D2AF5BFC400E5A48B /* NaverPlaceAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FD83C2AF5BFC400E5A48B /* NaverPlaceAPIManager.swift */; };
 		B66FD83F2AF5C1D500E5A48B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FD83E2AF5C1D500E5A48B /* Place.swift */; };
 		B683F66B2A939748003EB8F8 /* Similar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B683F66A2A939748003EB8F8 /* Similar.swift */; };
@@ -47,6 +51,9 @@
 		B6EF325C2A878FA900787F5C /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6EF325A2A878FA900787F5C /* MovieCollectionViewCell.xib */; };
 		B6EF325E2A8790A800787F5C /* Trending.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EF325D2A8790A800787F5C /* Trending.swift */; };
 		B6EF32612A8793A200787F5C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EF32602A8793A200787F5C /* Reusable.swift */; };
+		B6FAC4602AFB771B0023599F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B6FAC45F2AFB771B0023599F /* RxCocoa */; };
+		B6FAC4622AFB771B0023599F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B6FAC4612AFB771B0023599F /* RxRelay */; };
+		B6FAC4642AFB771B0023599F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B6FAC4632AFB771B0023599F /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +66,10 @@
 		B63F3F232A87A90F00E9168A /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		B63F3F262A87AAFF00E9168A /* MovieAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIManager.swift; sourceTree = "<group>"; };
 		B63F3F2A2A87C1A800E9168A /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		B64EB76E2AFB5E28001FCE32 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		B64EB7702AFB6129001FCE32 /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
+		B64EB7722AFB62AB001FCE32 /* DiscoverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewCell.swift; sourceTree = "<group>"; };
+		B64EB7742AFB65FE001FCE32 /* TitleSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSupplementaryView.swift; sourceTree = "<group>"; };
 		B66FD83C2AF5BFC400E5A48B /* NaverPlaceAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverPlaceAPIManager.swift; sourceTree = "<group>"; };
 		B66FD83E2AF5C1D500E5A48B /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		B683F66A2A939748003EB8F8 /* Similar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Similar.swift; sourceTree = "<group>"; };
@@ -97,10 +108,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6FAC4602AFB771B0023599F /* RxCocoa in Frameworks */,
 				B6C850C92A8759D1000D3461 /* Kingfisher in Frameworks */,
+				B6FAC4622AFB771B0023599F /* RxRelay in Frameworks */,
 				B6B51EB02A96343600DFE9E4 /* SnapKit in Frameworks */,
 				B6C850C62A8759C1000D3461 /* SwiftyJSON in Frameworks */,
 				B6C850C32A8759BA000D3461 /* Alamofire in Frameworks */,
+				B6FAC4642AFB771B0023599F /* RxSwift in Frameworks */,
 				A5C73FE44FCA0E644C24753B /* Pods_Media_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +199,7 @@
 				B683F66A2A939748003EB8F8 /* Similar.swift */,
 				B6B51EB12A963A3000DFE9E4 /* Theater.swift */,
 				B66FD83E2AF5C1D500E5A48B /* Place.swift */,
+				B64EB7702AFB6129001FCE32 /* Genres.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +227,8 @@
 				B683F6752A93DC69003EB8F8 /* SimilarCollectionTableViewCell.xib */,
 				B6E90B8E2A9A6D4200C8CA09 /* OnboardingButton.swift */,
 				B611AAA02A9E6C26009FDCAB /* ProfileView.swift */,
+				B64EB7722AFB62AB001FCE32 /* DiscoverCollectionViewCell.swift */,
+				B64EB7742AFB65FE001FCE32 /* TitleSupplementaryView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -231,6 +248,7 @@
 				B6C850B12A8757D2000D3461 /* WatchlistViewController.swift */,
 				B63F3F2A2A87C1A800E9168A /* MovieDetailViewController.swift */,
 				B6B51EAC2A96329400DFE9E4 /* FinderViewController.swift */,
+				B64EB76E2AFB5E28001FCE32 /* DiscoverViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +315,9 @@
 				B6C850C52A8759C1000D3461 /* SwiftyJSON */,
 				B6C850C82A8759D1000D3461 /* Kingfisher */,
 				B6B51EAF2A96343600DFE9E4 /* SnapKit */,
+				B6FAC45F2AFB771B0023599F /* RxCocoa */,
+				B6FAC4612AFB771B0023599F /* RxRelay */,
+				B6FAC4632AFB771B0023599F /* RxSwift */,
 			);
 			productName = "Media Project";
 			productReference = B6C850AA2A8757D2000D3461 /* Media Project.app */;
@@ -310,7 +331,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					B6C850A92A8757D2000D3461 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -331,6 +352,7 @@
 				B6C850C42A8759C1000D3461 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				B6C850C72A8759D1000D3461 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B6B51EAE2A96343600DFE9E4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B6FAC45E2AFB771B0023599F /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = B6C850AB2A8757D2000D3461 /* Products */;
 			projectDirPath = "";
@@ -415,12 +437,15 @@
 				B6C850AE2A8757D2000D3461 /* AppDelegate.swift in Sources */,
 				B63F3F242A87A90F00E9168A /* Extension+UIView.swift in Sources */,
 				B6C850B02A8757D2000D3461 /* SceneDelegate.swift in Sources */,
+				B64EB76F2AFB5E28001FCE32 /* DiscoverViewController.swift in Sources */,
+				B64EB7712AFB6129001FCE32 /* Genres.swift in Sources */,
 				B6E90B8B2A9A659300C8CA09 /* OnboardingViewController.swift in Sources */,
 				B66FD83D2AF5BFC400E5A48B /* NaverPlaceAPIManager.swift in Sources */,
 				B6B51EAD2A96329400DFE9E4 /* FinderViewController.swift in Sources */,
 				B60186172AF5EEDF00498EBE /* APIKeys.swift in Sources */,
 				B683F6762A93DC69003EB8F8 /* SimilarCollectionTableViewCell.swift in Sources */,
 				B6C438D92A87CE69000ED1F3 /* MovieContributor.swift in Sources */,
+				B64EB7732AFB62AB001FCE32 /* DiscoverCollectionViewCell.swift in Sources */,
 				B611AAA12A9E6C26009FDCAB /* ProfileView.swift in Sources */,
 				B6D6F3C12A8783FB0003A8B7 /* Extension+UIColor.swift in Sources */,
 				B683F6722A939E28003EB8F8 /* SimilarCollectionViewCell.swift in Sources */,
@@ -433,6 +458,7 @@
 				B683F66B2A939748003EB8F8 /* Similar.swift in Sources */,
 				B63F3F222A87997700E9168A /* Extension+UIViewController.swift in Sources */,
 				B6EF325B2A878FA900787F5C /* MovieCollectionViewCell.swift in Sources */,
+				B64EB7752AFB65FE001FCE32 /* TitleSupplementaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -494,6 +521,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -522,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -554,6 +583,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -702,6 +732,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		B6FAC45E2AFB771B0023599F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -724,6 +762,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B6C850C72A8759D1000D3461 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		B6FAC45F2AFB771B0023599F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6FAC45E2AFB771B0023599F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		B6FAC4612AFB771B0023599F /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6FAC45E2AFB771B0023599F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		B6FAC4632AFB771B0023599F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6FAC45E2AFB771B0023599F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

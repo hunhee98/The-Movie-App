@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -249,6 +249,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="DaE-GJ-OMZ" kind="relationship" relationship="viewControllers" id="JSM-jV-Vwd"/>
+                        <segue destination="9EE-7J-d4z" kind="relationship" relationship="viewControllers" id="UJG-04-mfP"/>
                         <segue destination="LaT-zv-9sn" kind="relationship" relationship="viewControllers" id="n9a-Hi-cu9"/>
                     </connections>
                 </tabBarController>
@@ -256,8 +257,44 @@
             </objects>
             <point key="canvasLocation" x="945.80152671755718" y="552.11267605633805"/>
         </scene>
+        <!--Discover View Controller-->
+        <scene sceneID="jfw-mK-Sqr">
+            <objects>
+                <viewController id="h7N-qt-0Oa" customClass="DiscoverViewController" customModule="Media_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vJs-vj-UJ4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7Be-VO-Uvf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JmC-06-2pB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ocL-z2-kZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799.2366412213742" y="1593.661971830986"/>
+        </scene>
+        <!--Discover-->
+        <scene sceneID="3Je-n1-lfH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9EE-7J-d4z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Discover" image="film.stack" catalog="system" id="YBn-W7-0x4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PbW-pG-Sjq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h7N-qt-0Oa" kind="relationship" relationship="rootViewController" id="pee-xA-BDX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GV5-ht-XHh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.5190839694656" y="1593.661971830986"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="film.stack" catalog="system" width="126" height="128"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="rectangle.on.rectangle.angled" catalog="system" width="128" height="98"/>
         <systemColor name="systemBackgroundColor">
