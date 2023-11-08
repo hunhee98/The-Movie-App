@@ -194,24 +194,25 @@ class FinderViewController: UIViewController {
 
 extension FinderViewController: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    print(#function)
-    print(locations)
   }
   
   func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-    print(#function)
-    print(error)
   }
   
   func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
     checkDeviceLocationAuthorization()
-    print(#function)
   }
 }
 
 extension FinderViewController: NMFMapViewCameraDelegate {
+  enum cameraDidChangeByReason: Int {
+    case initial = 0
+    case userInteraction = -1
+  }
+  
   func mapView(_ mapView: NMFMapView, cameraDidChangeByReason reason: Int, animated: Bool) {
-    if reason == -1 {
+    let reason = cameraDidChangeByReason(rawValue: reason)
+    if case .userInteraction = reason {
       searchAgainButton.isHidden = false
     }
   }
