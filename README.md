@@ -55,6 +55,11 @@ enum Strings {
     case Trending
   }
   
+  enum Discover: String {
+    case mainTitle = "Discover"
+    case subTitle = "Genre"
+  }
+  
   enum ComingSoon: String {
     case ComingSoon = "Coming Soon"
   }
